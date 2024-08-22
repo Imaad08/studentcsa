@@ -47,3 +47,5 @@ toc: true
     - "C" is a lack of consistent effort, lacking tangibles. Lack of producing running Code.
     - Below "C" is composed of Slash/Slash/Slash offenses. Lack of attendance, disruptive behaviors, using phone inappropriately, doing work from other classes during CompSci class time, paper visible in class, and turning in "tangibles" that you can't represent in live review.
     - Zero is a result of plagiarism.  The Teachers will likely miss the first few offenses of plagiarism, thus any offense will result in an inquiry on previous work. Remember this is an effort-based class.
+
+Test for commit
