@@ -1,17 +1,20 @@
-title: Nighthawk Pages 
+title: Nighthawk Pages
 description: "Class of 2025"
 owner_name: Imaad Muzaffer
 github_username: Imaad08
-github_repo: "studentcsa" 
+github_repo: "studentcsa"
 baseurl: "/studentcsa"
 future: true
 remote_theme: jekyll/minima
 minima:
   skin: dark
   social_links:
-    - { platform: github, user_url: "https://github.com/Imaad08"}
+    - { platform: github, user_url: "https://github.com/Imaad08" }
     - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@nighthawkcodingsociety2868" } 
+    - {
+        platform: youtube,
+        user_url: "https://www.youtube.com/@nighthawkcodingsociety2868",
+      }
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
@@ -23,4 +26,5 @@ header_pages:
   - navigation/blog.md
   - navigation/search.md
   - navigation/about.md
+  - navigation/versions.md
   - README4YML.md
