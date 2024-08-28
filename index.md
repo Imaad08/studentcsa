@@ -1,113 +1,202 @@
 ---
 layout: base
-title: Student Home 
+title: Student Home
 description: Home Page
 hide: true
 ---
 
+## Imaads Page
 
-# Calculator for ideation:
+- ### Here is my [Github](https://github.com/imaad08)
+
+- ### Here is a little [about me](https://Imaad08.github.io/studentcsa/about)
+
+- ### Here is a list of popular cities and their weather
+
+- ### You can enter cities to see their weather
+
+<br>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imaad's Calculator</title>
+  <title>Weather App</title>
   <style>
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .search-container {
+      margin: 20px 0;
+      border-radius: 20px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+    }
     button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
       cursor: pointer;
-      font-size: 2rem;
-      border: 1px solid grey;
-      outline: none;
-      background-color: rgba(255, 255, 255, .75);
+      transition: background-color 0.3s;
+      outline: 3px solid white;
     }
     button:hover {
-      background-color: grey;
+      background-color: #0056b3;
     }
-    .operator {
-      background-color: #f2a154;
-      color: white;
-    }
-    .calculator {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      min-height: 50vh;
-      grid-template-columns: repeat(4, 100px);
-      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    }
-    .two-spaces {
-      grid-column: span 2;
-    }
-    .three-spaces {
-      grid-column: span 3;
-    }
-    .display {
-      grid-column: 1 / -1;
-      background-color: rgba(0, 0, 0, .75);
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-around;
-      flex-direction: column;
-      padding: 10px;
-      word-wrap: break-word;
-      word-break: break-all;
-    }
-    input {
-      width: 100%;
-      border: none;
-      font-size: 1.5rem;
-      background-color: transparent;
-      color: white;
-    }
+    
   </style>
 </head>
 
 <body>
-  <div class="calculator">
-    <div class="display">
-      <input type="text" id="result" value="0" disabled>
-    </div>
-    <button id="clear" class="three-spaces" onclick="clearDisplay()">AC</button>
-    <button class="operator" onclick="appendSymbol('/')">÷</button>
-    <button onclick="appendSymbol('1')">1</button>
-    <button onclick="appendSymbol('2')">2</button>
-    <button onclick="appendSymbol('3')">3</button>
-    <button class="operator" onclick="appendSymbol('*')">*</button>
-    <button onclick="appendSymbol('4')">4</button>
-    <button onclick="appendSymbol('5')">5</button>
-    <button onclick="appendSymbol('6')">6</button>
-    <button class="operator" onclick="appendSymbol('+')">+</button>
-    <button onclick="appendSymbol('7')">7</button>
-    <button onclick="appendSymbol('8')">8</button>
-    <button onclick="appendSymbol('9')">9</button>
-    <button class="operator" onclick="appendSymbol('-')">-</button>
-    <button onclick="appendSymbol('.')">.</button>
-    <button onclick="appendSymbol('0')">0</button>
-    <button id="equals" class="two-spaces" onclick="calculate()">=</button>
-  </div>
-  <script>
-    let currentInput = '';
-    function appendSymbol(symbol) {
-      currentInput += symbol;
-      updateDisplay(currentInput);
-    }
-    function calculate() {
-      try {
-        const result = eval(currentInput);
-        updateDisplay(result);
-        currentInput = result.toString();
-      } catch (error) {
-        updateDisplay('Error');
-        currentInput = '';
-      }
-    }
-    function clearDisplay() {
-      currentInput = '';
-      updateDisplay('0');
-    }
-    function updateDisplay(content) {
-      document.getElementById('result').value = content;
-    }
 
+  <div class="weather-container">
+    <input type="text" id="location" placeholder="Enter a city">
+    <button onclick="fetchWeather()">Search</button>
+    <div id="weather-data">
+    </div>
+  </div>
+  <!-- Table to display top 10 cities' weather data -->
+  <table id="top-cities-table" class="container">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>City</th>
+        <th>Weather</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data for top 10 cities will be inserted here dynamically -->
+    </tbody>
+  </table>
+
+  <script>
+// Function to fetch weather data when called
+function fetchWeather() {
+  // Get the input element for location from the HTML document
+  var locationInput = document.getElementById("location");
+
+  // Get the trimmed value of the location input
+  var location = locationInput.value.trim();
+
+  // Check if the location input is empty
+  if (location === "") {
+    // Display an alert if the input is empty and return from the function
+    alert("Please enter a city.");
+    return;
+  }
+
+  // OpenWeatherMap API Key for authentication
+  var OpenWeatherMapAPIKey = "06ffac091aa8f9ef15e54c9209611dcd";
+
+  // Construct the URL for the OpenWeatherMap API request using the location and API key
+  var URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${OpenWeatherMapAPIKey}`;
+
+  // Use the fetch API to make an HTTP request to the OpenWeatherMap API
+  fetch(URL)
+    .then(response => response.json()) // Parse the response as JSON
+    .then(data => {
+      // Check if the data includes sys information, indicating a valid response
+      if (data.sys) {
+        // Get the weather data container element from the HTML document
+        var weatherContainer = document.getElementById("weather-data");
+
+        // Calculate the temperature in Fahrenheit from the Kelvin value in the response
+        var temperature = Math.round(((data.main.temp - 273.15) * (9 / 5)) + 32).toFixed(0);
+
+        // Update the HTML content with weather information
+        weatherContainer.innerHTML = `
+          <br>
+          <h2>Weather in ${data.name}, ${data.sys.country} looks like:</h2>
+          <p>Temperature: ${temperature}°F, ${data.weather[0].description}</p>
+          <p>Humidity is ${data.main.humidity}%</p>
+        `;
+      } else {
+        // If sys information is not available in the response, log an error and show an alert
+        console.error("Error fetching weather data: Country information not available.");
+        alert('Please try retyping the city name');
+      }
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch operation
+      console.error("Error fetching weather data:", error);
+    });
+}
+
+// Get the location input element again
+var locationInput = document.getElementById("location");
+
+// Add an event listener to the location input element to trigger fetchWeather() when Enter key is pressed
+locationInput.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    fetchWeather();
+  }
+});
+function fetchWeatherForCity(cityName) {
+  // Construct the URL for the OpenWeatherMap API request for the specified city
+  var OpenWeatherMapAPIKey = "06ffac091aa8f9ef15e54c9209611dcd"; 
+  var URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${OpenWeatherMapAPIKey}`;
+
+  // Use the fetch API to make an HTTP request to the OpenWeatherMap API
+  return fetch(URL)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data && data.main) {
+        return data;
+      } else {
+        throw new Error("Weather data not available for city: " + cityName);
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching weather data for city:", error);
+      return null; // Return null for cities with errors
+    });
+}
+
+// Function to fetch weather data for the top cities
+function fetchWeatherForTopCities() {
+  var topCities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "Austin"];
+
+  Promise.all(topCities.map(city => fetchWeatherForCity(city)))
+    .then(weatherDataArray => {
+      var tableBody = document.querySelector("#top-cities-table tbody");
+      tableBody.innerHTML = "";
+
+      weatherDataArray.forEach((weatherData, index) => {
+        if (weatherData) { // Check if weather data is available
+          var temperature = Math.round(((weatherData.main.temp - 273.15) * (9 / 5)) + 32).toFixed(0);
+          var row = `<tr>
+                       <td>${index + 1}</td>
+                       <td>${topCities[index]}</td>
+                       <td>${temperature}°F, ${weatherData.weather[0].description}</td>
+                     </tr>`;
+          tableBody.innerHTML += row;
+        }
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching weather data for top cities:", error);
+    });
+}
+
+// Call fetchWeatherForTopCities initially to populate the table
+fetchWeatherForTopCities();
   </script>
+
 </body>
