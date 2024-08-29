@@ -8,7 +8,7 @@ courses: { csse: { week: 0 }, csp: { week: 0 }, csa: { week: 0 } }
 
 # Picture deleting nighthawk directory with studentcsa repo
 
-![alt text](SCR-20240827-ismn.png)
+![alt text](image-18.png)
 
 # Me and tanay helping Brandon and Jackson
 
