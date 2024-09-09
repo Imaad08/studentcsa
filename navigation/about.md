@@ -75,6 +75,7 @@ permalink: /about/
     transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
     justify-content: center;
     align-items: center;
+    margin-left: 120px;
   }
 
   /* Glow effect on hover */
@@ -115,14 +116,11 @@ permalink: /about/
 # Pictures about me
 
 <div class="image-gallery">
-  <img src="image-15.png" alt="image1"> 
-  <img src="{{site.baseurl}}/images/SD/SD2.jpg" alt="image2"> 
-  <img src="{{site.baseurl}}/images/SD/SD3.jpg" alt="image3"> 
-  <img src="{{site.baseurl}}/images/SD/SD4.jpg" alt="image4"> 
-  <img src="{{site.baseurl}}/images/SD/SD5.jpg" alt="image5"> 
-  <img src="{{site.baseurl}}/images/SD/SD6.jpg" alt="image6"> 
-  <img src="{{site.baseurl}}/images/SD/SD7.jpg" alt="image7"> 
-  <img src="{{site.baseurl}}/images/SD/SD8.jpg" alt="image8"> 
+  <img src="{{site.baseurl}}/images/image-15.png" alt="image1"> 
+  <img src="{{site.baseurl}}/images/IMG_8246.JPG" alt="image2"> 
+  <img src="{{site.baseurl}}/images/SCR-20240908-udud.jpeg" alt="image3"> 
+  <img src="{{site.baseurl}}/images/SCR-20240908-udzs.jpeg" alt="image4"> 
+  <img src="{{site.baseurl}}/images/SCR-20240908-udny.jpeg" alt="image5"> 
 </div>
 
 <div class="section">
@@ -137,15 +135,14 @@ permalink: /about/
     I was born in San Diego but my family is originally from India
   </p>
 
-  <!-- Grid with Arrow Between Orange County and San Diego -->
   <div class="grid-container">
     <div class="grid-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_San_Diego_Goverment_Variant.svg/1600px-Flag_of_San_Diego_Goverment_Variant.svg.png" alt="SD">
-      <p>Born in SD</p>
+      <p>            Born in SD</p>
     </div>
     <div class="grid-item">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1599px-Flag_of_India.svg.png" alt="Ind">
-      <p>From India</p>
+      <p>            From India</p>
     </div>
   </div>
 
@@ -184,7 +181,7 @@ permalink: /about/
 <div class="section">
   <h2>My Freeform Picture</h2>
   <div class="freeform-picture">
-    <img src="image-14.png" alt="Freeform Picture">
+    <img src="{{site.baseurl}}/images/image-14.png" alt="Freeform Picture">
   </div>
   <p>This is the freeform picture that I created</p>
 </div>
