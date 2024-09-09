@@ -6,62 +6,65 @@ permalink: /about/
 
 <style>
   body {
-    background-color: #1a1a1a; /* Dark background */
-    color: white; /* White font */
+    background-color: #1a1a1a;
+    color: white;
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
   }
+
   .image-gallery {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
   }
 
   .image-gallery img {
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 5px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
   }
 
   .section {
     background-color: #282828;
-    padding-bottom: 10px; /* Minimal padding */
-    padding-right: 10px; 
-    padding-left: 10px; 
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     margin: 15px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 128, 255, 0.4); /* Faint blue shadow */
-    animation: pulse 2.5s infinite; /* Constant pulsing animation */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    animation: rgb-rotate 4s infinite linear;
   }
 
   h1, h2, h3, p {
-    margin: 5px 0; /* Reduced margin to bring text closer to the top */
-    padding: 10px; /* No padding */
-    line-height: 1.2; /* Reduced line-height for tighter text */
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.2;
     text-align: center;
   }
 
-  /* Animation for the box shadow */
-  @keyframes pulse {
+  /* RGB rotating box-shadow animation */
+  @keyframes rgb-rotate {
     0% {
-      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Red */
     }
-    50% {
-      box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
+    33% {
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); /* Green */
+    }
+    66% {
+      box-shadow: 0 0 20px rgba(0, 0, 255, 0.6); /* Blue */
     }
     100% {
-      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Back to Red */
     }
   }
 
-  /* Grid styling */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Flag, arrow, flag layout */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 0; /* Remove extra padding */
+    padding: 0;
   }
 
   .grid-item {
@@ -69,43 +72,43 @@ permalink: /about/
   }
 
   .grid-item img {
-    width: 250px; /* Increased flag size */
+    width: 250px;
     height: auto;
     border-radius: 10px;
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    transition: box-shadow 0.3s ease;
     justify-content: center;
     align-items: center;
     margin-left: 120px;
   }
+  .freeform-picture {
+    margin-left: 200px;
 
-  /* Glow effect on hover */
+  }
   .grid-item img:hover {
-    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6); /* Glow effect on hover */
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
   }
 
-  /* Arrow styling */
   .arrow img {
-    width: 250px; /* Adjust arrow size to match flags */
+    width: 250px;
     height: auto;
-    margin-top: 30px; /* Fine-tune arrow positioning */
+    margin-top: 30px;
   }
 
-  /* Center the India flag */
   .india-flag {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    margin-top: 20px; /* Add some space above */
+    justify-content: center;
+    margin-top: 20px;
   }
 
   .india-flag img {
-    width: 250px; /* Adjust flag size */
+    width: 250px;
     height: auto;
     border-radius: 10px;
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    transition: box-shadow 0.3s ease;
   }
 
   .india-flag img:hover {
-    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6); /* Glow effect on hover */
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
   }
 </style>
 
