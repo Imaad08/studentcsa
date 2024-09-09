@@ -82,7 +82,6 @@ permalink: /about/
   }
   .freeform-picture {
     margin-left: 200px;
-
   }
   .grid-item img:hover {
     box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
