@@ -17,9 +17,7 @@ hide: true
 
 <br>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     .container {
       text-align: center;
@@ -56,9 +54,7 @@ hide: true
     }
     
   </style>
-</head>
 
-<body>
 
   <div class="weather-container">
     <input type="text" id="location" placeholder="Enter a city">
@@ -198,4 +194,4 @@ function fetchWeatherForTopCities() {
 fetchWeatherForTopCities();
   </script>
 
-</body>
+
