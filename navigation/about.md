@@ -4,47 +4,187 @@ title: About
 permalink: /about/
 ---
 
-# About Me
-My name is Imaad Muzaffer and I am a passionate coder who loves working his way around problems. I belive that you have to approach coding with a curious and embracing mindset. I enjoy embracing coding problems because each time I encounter a problem, I see it as a way to broaden my coding skillset and become a better coder in general. Another thing I love about coding, web development, specifically, is when you pour a lot of hard work into a website and it turns out looking exactly how you want. Frienship is also something I hold extremely close to me as I love being around my friends and laughing with them. This feeling makes me feel happy and brings a smile to my face.
+<style>
+  body {
+    background-color: #1a1a1a; /* Dark background */
+    color: white; /* White font */
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .image-gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 10px;
+  }
 
-- I enjoy working with HTML, CSS, JavaScript and game development with Unity
+  .image-gallery img {
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+  }
 
+  .section {
+    background-color: #282828;
+    padding-bottom: 10px; /* Minimal padding */
+    padding-right: 10px; 
+    padding-left: 10px; 
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 128, 255, 0.4); /* Faint blue shadow */
+    animation: pulse 2.5s infinite; /* Constant pulsing animation */
+  }
 
-# Who Am I
+  h1, h2, h3, p {
+    margin: 5px 0; /* Reduced margin to bring text closer to the top */
+    padding: 10px; /* No padding */
+    line-height: 1.2; /* Reduced line-height for tighter text */
+    text-align: center;
+  }
 
+  /* Animation for the box shadow */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.4);
+    }
+  }
 
-## My Class Schedule:
+  /* Grid styling */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Flag, arrow, flag layout */
+    gap: 10px;
+    padding: 0; /* Remove extra padding */
+  }
 
-<table style="border-collapse: collapse; width: 50%;">
-  <tr>
-    <th style="border: 1px solid black; padding: 8px;">Period</th>
-    <th style="border: 1px solid black; padding: 8px;">Class</th>
-  </tr>
-  <tr>
-    <td style="border: 1px solid black; padding: 8px;">1</td>
-    <td style="border: 1px solid black; padding: 8px;">AP CSA</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid black; padding: 8px;">2</td>
-    <td style="border: 1px solid black; padding: 8px;">AP Physics</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid black; padding: 8px;">3</td>
-    <td style="border: 1px solid black; padding: 8px;">PE</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid black; padding: 8px;">4</td>
-    <td style="border: 1px solid black; padding: 8px;">AP Bio</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid black; padding: 8px;">5</td>
-    <td style="border: 1px solid black; padding: 8px;">American Literature</td>
-  </tr>
-</table>
+  .grid-item {
+    text-align: center;
+  }
 
-## Pictures about me:
+  .grid-item img {
+    width: 250px; /* Increased flag size */
+    height: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    justify-content: center;
+    align-items: center;
+  }
 
-|                     ![alt text](image-14.png)                     |                   ![alt text](image-15.png)                   |
-| :---------------------------------------------------------------: | :-----------------------------------------------------------: |
-| This is my picture I created with freeform that expresses myself. | I value relationships with my friends and family very highly. |
+  /* Glow effect on hover */
+  .grid-item img:hover {
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6); /* Glow effect on hover */
+  }
 
+  /* Arrow styling */
+  .arrow img {
+    width: 250px; /* Adjust arrow size to match flags */
+    height: auto;
+    margin-top: 30px; /* Fine-tune arrow positioning */
+  }
+
+  /* Center the India flag */
+  .india-flag {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Add some space above */
+  }
+
+  .india-flag img {
+    width: 250px; /* Adjust flag size */
+    height: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .india-flag img:hover {
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6); /* Glow effect on hover */
+  }
+</style>
+
+<div class="section">
+  <h1>About Me Page</h1>
+</div>
+
+# Pictures about me
+
+<div class="image-gallery">
+  <img src="image-15.png" alt="image1"> 
+  <img src="{{site.baseurl}}/images/SD/SD2.jpg" alt="image2"> 
+  <img src="{{site.baseurl}}/images/SD/SD3.jpg" alt="image3"> 
+  <img src="{{site.baseurl}}/images/SD/SD4.jpg" alt="image4"> 
+  <img src="{{site.baseurl}}/images/SD/SD5.jpg" alt="image5"> 
+  <img src="{{site.baseurl}}/images/SD/SD6.jpg" alt="image6"> 
+  <img src="{{site.baseurl}}/images/SD/SD7.jpg" alt="image7"> 
+  <img src="{{site.baseurl}}/images/SD/SD8.jpg" alt="image8"> 
+</div>
+
+<div class="section">
+  <h2>About Me</h2>
+  <p>
+    My name is Imaad Muzaffer and I am a passionate coder who loves working his way around problems. I belive that you have to approach coding with a curious and embracing mindset. I enjoy embracing coding problems because each time I encounter a problem, I see it as a way to broaden my coding skillset and become a better coder in general. Another thing I love about coding, web development, specifically, is when you pour a lot of hard work into a website and it turns out looking exactly how you want. Frienship is also something I hold extremely close to me as I love being around my friends and laughing with them. This feeling makes me feel happy and brings a smile to my face.
+  </p>
+</div>
+<div class="section">
+  <h2>Where I come from</h2>
+  <p>
+    I was born in San Diego but my family is originally from India
+  </p>
+
+  <!-- Grid with Arrow Between Orange County and San Diego -->
+  <div class="grid-container">
+    <div class="grid-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Flag_of_San_Diego_Goverment_Variant.svg/1600px-Flag_of_San_Diego_Goverment_Variant.svg.png" alt="SD">
+      <p>Born in SD</p>
+    </div>
+    <div class="grid-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/1599px-Flag_of_India.svg.png" alt="Ind">
+      <p>From India</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="section">
+  <h2>My Class Schedule</h2>
+  <table>
+    <tr>
+      <th>Period</th>
+      <th>Class</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>AP CSA</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>AP Physics</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>PE</td>
+    </tr>   
+    <tr>
+      <td>4</td>
+      <td>AP Bio</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>American Literature</td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h2>My Freeform Picture</h2>
+  <div class="freeform-picture">
+    <img src="image-14.png" alt="Freeform Picture">
+  </div>
+  <p>This is the freeform picture that I created</p>
+</div>
