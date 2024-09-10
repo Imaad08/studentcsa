@@ -84,7 +84,6 @@ permalink: /about/
     margin-left: 200px;
   }
   .grid-item img:hover {
-    box-shadow: 0 0 30px rgba(0, 128, 255, 0.6);
   }
 
   .arrow img {
@@ -124,6 +123,200 @@ permalink: /about/
   <img src="{{site.baseurl}}/images/SCR-20240908-udzs.jpeg" alt="image4"> 
   <img src="{{site.baseurl}}/images/SCR-20240908-udny.jpeg" alt="image5"> 
 </div>
+
+# A map of places I have been
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Map container */
+        #map {
+            height: 500px;
+        }
+        /* Basic modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            color: #000; /* Set text color to black */
+        }
+        .modal img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Prevent background scroll when modal is open */
+        body.modal-open {
+            overflow: hidden;
+        }
+        /* Custom style for Leaflet pop-ups */
+        .custom-popup {
+            color: #0000FF;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <!-- Modal Structure -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody">
+                <!-- Dynamic content will be injected here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2);
+        // Add a tile layer (Map provider)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        // Function to create content for pop-ups with a custom class
+        function getPopupContent(country) {
+            return `
+                <div class="custom-popup">
+                    <h3>${country}</h3>
+                    <p style="color: #000">Brief info about ${country}.</p>
+                    <button onclick="openModal('${country}')">View Here</button>
+                </div>
+            `;
+        }
+        // Add markers to the map for visited countries
+        var usaMarker = L.marker([37.0902, -95.7129]).addTo(map);
+        usaMarker.bindPopup(getPopupContent('USA'));
+        var mexicoMarker = L.marker([23.6345, -102.5528]).addTo(map);
+        mexicoMarker.bindPopup(getPopupContent('Mexico'));
+        var indiaMarker = L.marker([20.5937, 78.9629]).addTo(map);
+        indiaMarker.bindPopup(getPopupContent('India'));
+        var switzerlandMarker = L.marker([46.8182, 8.2275]).addTo(map);
+        switzerlandMarker.bindPopup(getPopupContent('Switzerland'));
+        var franceMarker = L.marker([46.6034, 1.8883]).addTo(map);
+        franceMarker.bindPopup(getPopupContent('France'));
+        var ukMarker = L.marker([55.3781, -3.4360]).addTo(map);
+        ukMarker.bindPopup(getPopupContent('Great Britain'));
+        var turkeyMarker = L.marker([38.9637, 35.2433]).addTo(map);
+        turkeyMarker.bindPopup(getPopupContent('Turkey'));
+        var qatarMarker = L.marker([25.3548, 51.1839]).addTo(map);
+        qatarMarker.bindPopup(getPopupContent('Qatar'));
+        var uaeMarker = L.marker([23.4241, 53.8478]).addTo(map);
+        uaeMarker.bindPopup(getPopupContent('UAE'));
+        // Modal logic
+        var modal = document.getElementById("infoModal");
+        var modalContent = document.getElementById("modalBody");
+        var closeModalButton = document.getElementsByClassName("close")[0];
+        closeModalButton.onclick = function() {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.classList.remove('modal-open');
+            }
+        }
+        function openModal(country) {
+            let modalHTML = '';
+            switch (country) {
+                case 'USA':
+                    modalHTML = `
+                        <h2>More about USA</h2>
+                        <p style="color: #000">The USA is known for its diverse landscapes, from mountains to beaches, and cities like New York and Los Angeles. Its culture is an eclectic mix of global influences. I was born and raised in the USA here in California</p>
+                        <img src="{{site.baseurl}}/images/image-15.png" alt="USA Image">
+                    `;
+                    break;
+                case 'Mexico':
+                    modalHTML = `
+                        <h2>More about Mexico</h2>
+                        <p style="color: #000">Mexico offers rich history with ancient civilizations, vibrant culture, and beautiful beaches along the Pacific and Caribbean coasts. I have visitied multiple times with my family to walk around and explore the country.</p>
+                        <img src="{{site.baseurl}}/images/image.png" alt="Mexico Image">
+                    `;
+                    break;
+                case 'India':
+                    modalHTML = `
+                        <h2>More about India</h2>
+                        <p style="color: #000">India is a land of contrasts, from the Himalayan mountains to bustling cities. It’s known for its diverse culture, history, and spiritual traditions. I visit this country the most frequently because half of my family lives there.</p>
+                        <img src="{{site.baseurl}}/images/image-2.png" alt="India Image">
+                    `;
+                    break;
+                case 'Switzerland':
+                    modalHTML = `
+                        <h2>More about Switzerland</h2>
+                        <p style="color: #000">Switzerland is renowned for its breathtaking Alpine scenery, charming towns, and its role as a global center for finance and diplomacy. I went for a summer vacation last year with my family.</p>
+                        <img src="{{site.baseurl}}/images/image-3.png" alt="Switzerland Image">
+                    `;
+                    break;
+                case 'France':
+                    modalHTML = `
+                        <h2>More about France</h2>
+                        <p style="color: #000">France is famed for its history, art, architecture, and cuisine, from Paris to the Riviera. It’s a cultural powerhouse in Europe. I went for a summer vacation last year with my family.</p>
+                        <img src="{{site.baseurl}}/images/image-4.png" alt="France Image">
+                    `;
+                    break;
+                case 'Great Britain':
+                    modalHTML = `
+                        <h2>More about Great Britain</h2>
+                        <p style="color: #000">Great Britain encompasses England, Scotland, and Wales, with rich history, diverse landscapes, and influential cultural heritage. I went to visit some family that is living in London right now.</p>
+                        <img src="{{site.baseurl}}/images/image-5.png" alt="UK Image">
+                    `;
+                    break;
+                case 'Turkey':
+                    modalHTML = `
+                        <h2>More about Turkey</h2>
+                        <p style="color: #000">Turkey bridges East and West with its ancient cities, cultural heritage, and beautiful coastlines along the Mediterranean and Aegean seas. I went for a few days with my family as part of a larger trip.</p>
+                        <img src="{{site.baseurl}}/images/image-6.png" alt="Turkey Image">
+                    `;
+                    break;
+                case 'Qatar':
+                    modalHTML = `
+                        <h2>More about Qatar</h2>
+                        <p style="color: #000">Qatar is known for its futuristic architecture, rapid development, and cultural blend of tradition and modernity in the Middle East. This was my most recent vacation and we went for about a week to look around and do some tourist activities.</p>
+                        <img src="{{site.baseurl}}/images/image-7.png" alt="Qatar Image">
+                    `;
+                    break;
+                case 'UAE':
+                    modalHTML = `
+                        <h2>More about UAE</h2>
+                        <p style="color: #000">The UAE is famous for its modern cities like Dubai and Abu Dhabi, with iconic skyscrapers, luxurious lifestyle, and vast deserts. I also have some family who live in the UAE in Dubai and frequently visit them.</p>
+                        <img src="{{site.baseurl}}/images/image-8.png" alt="UAE Image">
+                    `;
+                    break;
+            }
+            modalContent.innerHTML = modalHTML;
+            modal.style.display = "block";
+            document.body.classList.add('modal-open');
+        }
+    </script>
+
 
 <div class="section">
   <h2>About Me</h2>
