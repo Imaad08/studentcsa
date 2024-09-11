@@ -20,15 +20,66 @@ permalink: /about/
   }
 
   .section {
-    background-color: #282828;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 15px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
-    animation: rgb-rotate 4s infinite linear;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #282828;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
   }
+
+  .section:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+.section:active{
+  color: #000
+}
+.section:after{
+  background: transparent;
+}
+.section:before{
+  opacity: 1;
+}
+.section:after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #282828;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
 
   h1, h2, h3, p {
     margin: 5px 0;
@@ -313,13 +364,14 @@ permalink: /about/
             document.body.classList.add('modal-open');
         }
     </script>
-
+<br>
 <div class="section">
   <h2>About Me</h2>
   <p>
     My name is Imaad Muzaffer and I am a passionate coder who loves working his way around problems. I belive that you have to approach coding with a curious and embracing mindset. I enjoy embracing coding problems because each time I encounter a problem, I see it as a way to broaden my coding skillset and become a better coder in general. Another thing I love about coding, web development, specifically, is when you pour a lot of hard work into a website and it turns out looking exactly how you want. Frienship is also something I hold extremely close to me as I love being around my friends and laughing with them. This feeling makes me feel happy and brings a smile to my face.
   </p>
 </div>
+<br>
 <div class="section">
   <h2>Where I come from</h2>
   <p>
@@ -338,6 +390,7 @@ permalink: /about/
   </div>
 
 </div>
+<br>
 
 <div class="section">
   <h2>My Class Schedule</h2>
@@ -368,6 +421,7 @@ permalink: /about/
     </tr>
   </table>
 </div>
+<br>
 
 <div class="section">
   <h2>My Freeform Picture</h2>
