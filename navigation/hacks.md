@@ -43,3 +43,9 @@ DNS is the address manager for the internet. Reflect on the following questions:
   - Yes, the URL is unique because it includes my personal GitHub username and repository name.
 - **Did you change the URL? If so, when?**
   - I have not changed the URL. However, custom domains can be set up using DNS configurations in GitHub Pages settings.
+
+# Gitlens
+![alt text](image-21.png)
+
+# Analytics
+![alt text](image-22.png)
