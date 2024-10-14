@@ -28,19 +28,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Install dependencies
-        run: |
-          pip install nbconvert
-          # Add any other necessary package installations here
-      - name: Execute conversion script
-        run: python scripts/convert_notebooks.py
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.1' # Set this to your desired Ruby version
+          bundler-cache: true
+      - name: Install Jekyll and dependencies
+        run: |
+          gem install bundler
+          bundle install
+      - name: Install Python dependencies
+        run: |
+          python -m venv venv  # Create virtual environment
+          source venv/bin/activate  # Activate the virtual environment
+          pip install -r requirements.txt  # Install Python packages
+
+      - name: Execute conversion script
+        run: |
+          source venv/bin/activate  # Activate virtual environment
+          python scripts/convert_notebooks.py  # Run your Python script
+      - name: Build with Jekyll
+        run: |
+          bundle exec jekyll build  # Build your Jekyll site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
