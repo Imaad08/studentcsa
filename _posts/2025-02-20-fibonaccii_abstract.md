@@ -5,6 +5,7 @@ title: Abstract Fibonaccii Hack
 description: A Fibonacci algorithm that runs using an abstract parent class.
 courses: {'csa': {'week': 25}}
 type: ccc
+comments: true
 image: /images/data_structures/fibonacci.png
 ---
 
