@@ -74,3 +74,12 @@ Whenever I get stuck, I sketch a mini grid on paper to keep track of what’s ha
 Each FRQ type targets a different skill, but they’re all connected. Practicing them over time has made the patterns feel more natural, and I’ve learned how to write clearer, more efficient code. I’ve also realized that formatting, spacing, and clean logic really do matter—not just for readability but for scoring points too.
 
 I still make mistakes sometimes, but understanding the structure of each FRQ has made a huge difference. Now, when I see a new question, I can usually tell which type it is and how to start. That’s been a game-changer in how I approach the AP CSA exam.
+
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.github_username }}/{{ site.github_repo | default: site.baseurl | remove: "/" }}"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
