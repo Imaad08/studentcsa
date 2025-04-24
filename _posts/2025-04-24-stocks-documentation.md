@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 permalink: /stocks/documentation
 title: Stocks Feature Documentation
 ---

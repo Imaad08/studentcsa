@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 permalink: /stocks/game/documentation
 title: Stocks 5-Year Game Documentation
 ---
