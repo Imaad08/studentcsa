@@ -1,156 +1,107 @@
 ---
 layout: post
 permalink: /stocks/documentation
-title: Stocks Feature Documentation
+title: Stocks Game Guide
 ---
 
-# Stocks Feature Documentation
+# Welcome to the Stocks Game!
 
-## Overview
+## What is the Stocks Game?
 
-The Stocks feature is a comprehensive stock market simulation system that allows users to manage a virtual stock portfolio. It provides real-time stock data, portfolio tracking, and trading capabilities in a gamified environment.
+The Stocks Game is a fun way to learn about investing in the stock market! You can buy and sell stocks, track your portfolio, and see how your investments perform over time - all in a safe, virtual environment.
 
-## Features
+## Getting Started
 
-### 1. Stock Dashboard
+### 1. Your Dashboard
 
-- **Home Page**: Displays a personalized dashboard with:
-  - Welcome message with user's name
-  - Portfolio balance history chart
-  - Current stock holdings
-  - Transaction history
-  - Real-time stock price updates
+When you first log in, you'll see:
 
-### 2. Stock Management
+- A welcome message with your name
+- Your current portfolio balance
+- A chart showing how your investments are performing
+- A list of stocks you own
+- Your recent trading history
 
-- **Portfolio View**: Shows all stocks owned by the user
-- **Buy/Sell Interface**: Allows users to:
-  - Purchase new stocks
-  - Sell existing stocks
-  - View current market prices
-  - Track transaction history
+### 2. How to Use the Stocks Game
 
-### 3. Stock Viewer
+#### Viewing Stocks
 
-- Real-time stock price tracking
-- Historical price charts
-- Stock search functionality
-- Price alerts and notifications
+1. Click on "Stocks" in the navigation bar
+2. You'll see a list of all available stocks
+3. Each stock shows:
+   - The company name
+   - Current price
+   - Price changes
+   - Trading volume
 
-## Technical Implementation
+#### Buying Stocks
 
-### Backend Architecture
+1. Go to the "Buy/Sell" page
+2. Enter the stock symbol (like AAPL for Apple)
+3. Choose how many shares you want to buy
+4. Click "Buy" to purchase
+5. The stock will appear in your portfolio
 
-The system is built using Spring Boot with the following components:
+#### Selling Stocks
 
-1. **Controller Layer** (`userStocksTableApiController.java`)
+1. Go to your "Portfolio" page
+2. Find the stock you want to sell
+3. Enter the number of shares to sell
+4. Click "Sell" to complete the transaction
 
-   - Handles HTTP requests for stock operations
-   - Endpoints:
-     - `/stocks/table/addStock`: Add stocks to portfolio
-     - `/stocks/table/removeStock`: Remove stocks from portfolio
-     - `/stocks/table/getStocks`: Retrieve user's stocks
-     - `/stocks/table/portfolioValue`: Calculate portfolio value
-     - `/stocks/table/simulateStocks`: Simulate stock value changes
-     - `/stocks/table/currentStockPrice`: Get real-time stock prices
+#### Tracking Your Portfolio
 
-2. **Service Layer** (`UserStocksTableService`)
+- View all your stocks in one place
+- See how much each stock is worth
+- Track your total portfolio value
+- Monitor your profits and losses
 
-   - Manages business logic
-   - Integrates with Yahoo Finance API for real-time stock data
-   - Handles portfolio calculations
-   - Manages user authentication
+## Tips for Success
 
-3. **Data Layer**
-   - Uses JPA repositories for data persistence
-   - Stores user stock information and transaction history
+### Smart Investing
 
-### Frontend Implementation
+- Start with companies you know
+- Don't put all your money in one stock
+- Research before you buy
+- Keep an eye on market trends
 
-- Built with modern web technologies:
-  - HTML5/CSS3 with Tailwind CSS for styling
-  - JavaScript for dynamic content
-  - Chart.js for data visualization
-  - Responsive design for all devices
+### Managing Your Portfolio
 
-## How to Use
+- Check your portfolio regularly
+- Set price alerts for important stocks
+- Keep track of your trading history
+- Learn from your successes and mistakes
 
-### 1. Getting Started
+## Common Questions
 
-1. Navigate to the Stocks Home page
-2. Log in with your credentials
-3. View your personalized dashboard
+### How do I find a stock?
 
-### 2. Managing Your Portfolio
+- Use the search bar at the top
+- Enter the company name or stock symbol
+- Popular symbols: AAPL (Apple), MSFT (Microsoft), GOOGL (Google)
 
-1. **Viewing Stocks**:
+### What do the numbers mean?
 
-   - Go to the Stocks Viewer page
-   - Search for any stock symbol
-   - View real-time prices and charts
+- Current Price: What the stock is worth now
+- Change: How much the price went up or down
+- Volume: How many shares were traded today
 
-2. **Buying Stocks**:
+### How do I know if I'm making money?
 
-   - Navigate to the Buy/Sell page
-   - Enter the stock symbol
-   - Specify quantity
-   - Confirm purchase
+- Green numbers mean you're making a profit
+- Red numbers mean you're at a loss
+- The portfolio chart shows your overall performance
 
-3. **Selling Stocks**:
-   - Go to your Portfolio
-   - Select the stock to sell
-   - Enter quantity
-   - Confirm sale
+## Need Help?
 
-### 3. Tracking Performance
+- If something's not working, try refreshing the page
+- Check that you have enough money for purchases
+- Make sure you're entering valid stock symbols
+- Contact support if you need more help
 
-- Monitor your portfolio value on the dashboard
-- View transaction history
-- Track individual stock performance
-- Analyze portfolio balance history
+## Remember
 
-## Security Features
-
-- Secure user authentication
-- Protected API endpoints
-- Encrypted data transmission
-- Session management
-
-## Best Practices
-
-1. **Portfolio Management**:
-
-   - Diversify your investments
-   - Monitor market trends
-   - Set price alerts
-   - Regular portfolio review
-
-2. **Trading**:
-   - Research before buying
-   - Start with small quantities
-   - Monitor market conditions
-   - Keep track of transaction history
-
-## Troubleshooting
-
-- If stock prices aren't updating, refresh the page
-- For transaction issues, check your balance
-- If charts aren't loading, ensure stable internet connection
-- Contact support for persistent issues
-
-## API Integration
-
-The system integrates with Yahoo Finance API to provide:
-
-- Real-time stock prices
-- Historical data
-- Market trends
-- Company information
-
-## Future Enhancements
-
-- Advanced charting tools
-- Portfolio analytics
-- Social trading features
-- Automated trading strategies
-
+- This is a learning game - have fun!
+- Don't worry about making mistakes
+- Take your time to learn how everything works
+- Practice different investment strategies
