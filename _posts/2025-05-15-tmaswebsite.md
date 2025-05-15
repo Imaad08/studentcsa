@@ -124,7 +124,7 @@ Our content team structured lessons into:
 ---  
 
 ### **Final Thoughts**  
-Leading this project was **one of the most rewarding experiences**—combining **tech, education, and teamwork** to make a real impact. The site is still growing, and I’m excited to see how it helps more students in the future!  
+Leading this project was **one of the most rewarding experiences**—combining **tech, education, and teamwork** to make a real impact. The site is still growing, and I’m excited to see how it helps more students in the future
 
 
 ---  
