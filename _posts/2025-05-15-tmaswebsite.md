@@ -87,18 +87,7 @@ Our content team structured lessons into:
 3. **Downloadable worksheets** (PDFs)  
 4. **Competition strategies** (AMC, Olympiad tips)  
 
----  
 
-## **Challenges & Solutions**  
-
-| **Challenge** | **Solution** |  
-|--------------|------------|  
-| **Time zone differences** | Scheduled overlapping work hours (early morning/late night syncs) |  
-| **Content consistency** | Used a shared Notion doc for curriculum standards |  
-| **Slow loading for videos** | Optimized with lazy loading & lower-resolution options |  
-| **Keeping students engaged** | Added gamification (badges, progress bars) |  
-
----  
 
 ## **Impact & Results**  
 ✅ **500+ students** accessed the platform in the first month  
