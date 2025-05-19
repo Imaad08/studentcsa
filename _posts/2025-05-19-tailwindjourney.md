@@ -40,6 +40,13 @@ Then, I discovered **Next.js**, which came with **Tailwind CSS pre-installed**�
 
 At first, I missed Bootstrap’s `row`/`col` system—but once I mastered Tailwind’s **`grid-cols-*`** and **`gap-*`**, I realized:  
 
+### **Tailwind Grid > Bootstrap Grid**  
+| Feature | Bootstrap | Tailwind |  
+|---------|----------|----------|  
+| **Columns** | Only 12-column | Any number (`grid-cols-3`, `grid-cols-7`, etc.) |  
+| **Responsiveness** | `col-md-6` | `md:grid-cols-2` |  
+| **Gaps** | Fixed gutters | Adjustable (`gap-4`, `gap-x-8`) |  
+| **Alignment** | Limited utilities | Full control (`justify-items-center`, `place-content-end`) |  
 
 ### **Example: A Responsive Grid in Tailwind**  
 ```jsx
