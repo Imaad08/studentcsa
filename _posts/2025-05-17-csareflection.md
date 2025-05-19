@@ -48,6 +48,11 @@ A **Java-based stock trading game** where players:
 - **Multi-threading** – Handling live data updates  
 
 ### **Challenges & Lessons**  
+| **Challenge** | **Solution** |  
+|--------------|------------|  
+| **Real-time data lagged UI** | Used **multi-threading** to separate data fetching from rendering |  
+| **Firebase auth was tricky** | Switched to **email/password + Google OAuth** for reliability |  
+| **Leaderboard updates were slow** | Implemented **caching** to reduce reads |  
 
 **Key Takeaway:** This project taught me **full-stack thinking**—how frontend, backend, and APIs interact.  
 

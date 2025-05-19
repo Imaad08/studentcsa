@@ -87,7 +87,18 @@ Our content team structured lessons into:
 3. **Downloadable worksheets** (PDFs)  
 4. **Competition strategies** (AMC, Olympiad tips)  
 
+---  
 
+## **Challenges & Solutions**  
+
+| **Challenge** | **Solution** |  
+|--------------|------------|  
+| **Time zone differences** | Scheduled overlapping work hours (early morning/late night syncs) |  
+| **Content consistency** | Used a shared Notion doc for curriculum standards |  
+| **Slow loading for videos** | Optimized with lazy loading & lower-resolution options |  
+| **Keeping students engaged** | Added gamification (badges, progress bars) |  
+
+---  
 
 ## **Impact & Results**  
 ✅ **500+ students** accessed the platform in the first month  
@@ -113,7 +124,7 @@ Our content team structured lessons into:
 ---  
 
 ### **Final Thoughts**  
-Leading this project was **one of the most rewarding experiences**—combining **tech, education, and teamwork** to make a real impact. The site is still growing, and I’m excited to see how it helps more students in the future
+Leading this project was **one of the most rewarding experiences**—combining **tech, education, and teamwork** to make a real impact. The site is still growing, and I’m excited to see how it helps more students in the future!  
 
 
 ---  
