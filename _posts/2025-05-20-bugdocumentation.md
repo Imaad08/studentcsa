@@ -12,6 +12,7 @@ title: Project Bug Docs
 
 ---  
 
+
 ## **Bug #1: Leaderboard Overflow on Mobile Devices**  
 **Reported By:** Beta Tester (iPhone 12)  
 **Issue:** The leaderboard table **extends beyond screen width**, forcing horizontal scrolling.  
