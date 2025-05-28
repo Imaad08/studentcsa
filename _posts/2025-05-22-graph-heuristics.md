@@ -460,6 +460,7 @@ Run the A\* algorithm from **A** to **D**, showing for each step:
 1. Which node you select next (lowest _f = g + h_).
 2. The values of _g(n)_, _h(n)_, and _f(n)_ for each neighbor when you relax its edges.
 3. The final shortest path and its total cost.
+
 ```java
 import java.util.*;
 
