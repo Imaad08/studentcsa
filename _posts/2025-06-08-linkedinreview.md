@@ -68,8 +68,11 @@ Applied these concepts to design intelligent systems that evaluate trade-offs in
 <img src="{{site.baseurl}}/images/SCR-20250610-lmdz.png" width = 500px height = auto alt="image1">
 <img src="{{site.baseurl}}/images/SCR-20250610-lmnz.png" width = 500px height = auto alt="image1">
 
-
 ---
+
+# Vcard
+
+<img class="qr-code" src="{{site.baseurl}}/images/frame.png" alt="QR Code" />
 
 ### 🚀 Skills, Internships & Future Vision
 
