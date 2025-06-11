@@ -67,3 +67,16 @@ Applied these concepts to design intelligent systems that evaluate trade-offs in
 
 <img src="{{site.baseurl}}/images/SCR-20250610-lmdz.png" width = 500px height = auto alt="image1">
 <img src="{{site.baseurl}}/images/SCR-20250610-lmnz.png" width = 500px height = auto alt="image1">
+
+
+---
+
+### 🚀 Skills, Internships & Future Vision
+
+Through my work on Open Coding Society and personal technical projects, I’ve developed skills across full-stack web development, machine learning, algorithmic problem solving, and systems design. These experiences helped me land a **selective internship at Vanguard Defense**, a **VC-backed startup** where I currently work on defense AI initiatives.
+
+At Vanguard Defense, I collaborate with a team of 8 talented peers under the mentorship of former **Northrop Grumman** engineers. We are tackling real-world challenges in national defense through artificial intelligence—designing models for strategic decision-making, autonomy, and threat assessment. The exposure to high-level technical thinking, agile teamwork, and defense-grade engineering principles has significantly shaped my approach to complex systems.
+
+I’m continuing to build a foundation in computer science and applied math while exploring how **AI and software systems** can support public infrastructure, security, and education. Long-term, I hope to use technology to create tools that are both scalable and socially valuable—whether in defense, civic tech, or predictive analytics. I aim to lead or contribute to teams that use code not just to automate, but to amplify human impact.
+
+---
